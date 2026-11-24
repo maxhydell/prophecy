@@ -1,0 +1,1 @@
+Card reading uses the open model "playing-card-detector" by irfanhossainsust (https://huggingface.co/irfanhossainsust/playing-card-detector), licensed AGPL-3.0 per its model card, run in the browser with ONNX Runtime Web.
