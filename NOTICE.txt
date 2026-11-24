@@ -1,1 +1,18 @@
-Card reading uses the open model "playing-card-detector" by irfanhossainsust (https://huggingface.co/irfanhossainsust/playing-card-detector), licensed AGPL-3.0 per its model card, run in the browser with ONNX Runtime Web.
+Third-party components used by this site
+
+Card reading models (models/card_detector.onnx, models/embedder.onnx, models/emb.f32, models/lab.u8, models/meta.json)
+  Converted for in-browser use from "playing-card-detector" by irfanhossainsust
+  https://huggingface.co/irfanhossainsust/playing-card-detector
+  A YOLO11n card detector (fine-tuned from Ultralytics YOLO11) and an EfficientNet-B0 card embedder with a reference embedding index.
+  Released by its author under AGPL-3.0, as is the YOLO11 base. Full license text: LICENSE-AGPL-3.0.txt
+  Its training card images come from the Cards Image Dataset on Kaggle
+  https://www.kaggle.com/datasets/gpiosenka/cards-image-datasetclassification
+  No dataset images are included here, only embedding vectors derived from them.
+
+ONNX Runtime Web (ort/)
+  Copyright (c) Microsoft Corporation. MIT License.
+  https://github.com/microsoft/onnxruntime
+
+The app source (src/ and build files in this repository) is provided so the site can be rebuilt and inspected.
+Card photos and camera video are read on the device and are not uploaded.
+To rebuild from source/, copy the models/ and ort/ folders from the repository root into source/public/, then run npm install and npm run build.
